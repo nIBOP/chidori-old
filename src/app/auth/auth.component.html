@@ -1,0 +1,30 @@
+ <form class="reg" [formGroup]="form" (ngSubmit)="submit()">
+    <h1>Вход</h1>
+    <div class="formcontrol">
+        <label for="Email">Email</label>
+        <br>
+        <input type="text" placeholder="default@chidori.ru" formControlName="email">
+        <div 
+        *ngIf="form.get('email')?.invalid && form.get('email')?.touched "
+        class="validation">
+            <small *ngIf="form.get('email')?.errors?.required" >
+                Заполните поле</small>
+            <small *ngIf="form.get('email')?.errors?.email">
+                Email некорректный</small>
+        </div>
+    </div>
+    <br>
+    <div class="formcontrol">
+        <label for="password">Пароль</label>
+        <br>
+        <input type="password" placeholder="Твой пароль" formControlName="password">
+        
+        <div class="validation" *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+            <small *ngIf="form.get('password')?.errors?.required">Заполните поле</small>
+            <small *ngIf="form.get('password')?.errors?.minlength" >
+                Длина пароля должна быть не менее 8 символов </small>
+        </div>
+    </div>
+    <br>
+    <button type="submit" [disabled]="form.invalid"> Войти </button>
+</form>

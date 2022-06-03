@@ -1,0 +1,19 @@
+h1 {
+    color: aliceblue;
+}
+form {
+    text-align: center;
+    font-size: large;
+    small {
+        color: red;
+    }
+}
+label {
+    color: aliceblue;
+}
+
+input {
+    &.ng-invalid.ng-touched {
+        border: 1px solid red;
+    }
+}
