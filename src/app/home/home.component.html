@@ -1,1 +1,8 @@
-<h1>Тут Аниме</h1>
+<h1>Популярно сейчас</h1>
+<div class="container">
+    <a class="title" href="{{getHref()}}" *ngFor="let title of titles">
+        <h2>{{title}}</h2> <br> 
+        <img src="{{getImage()}}" alt=""> 
+    
+    </a>
+</div>

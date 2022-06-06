@@ -15,6 +15,7 @@ import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { RanobeComponent } from './ranobe/ranobe.component';
 import { MerchComponent } from './merch/merch.component';
 import { MangaComponent } from './manga/manga.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MangaComponent } from './manga/manga.component';
     AuthComponent,
     RanobeComponent,
     MerchComponent,
-    MangaComponent
+    MangaComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,

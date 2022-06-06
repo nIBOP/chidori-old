@@ -1,13 +1,22 @@
 <div class="main">
     <div class="lftnav">
-        <a routerLink="/authentification">Личный кабинет</a>
         <div class="profile">
-
+            <button *ngIf="!check()" routerLink="/authentification" routerLinkActive="active-link">Войти или зарегистрироваться</button>
+            <br>
+            <a routerLink="/profile" >
+                <h2 *ngIf="check()">Профиль</h2>
+                <img *ngIf="check()" src="https://raw.githubusercontent.com/Fanotik/chidori-rep/main/ава.png" alt="ФОТО">
+            </a>
+            
+            <button *ngIf="check()" (click)="exit()">Выйти</button>
+            <!-- <p>{{check()}}</p> -->
         </div>
         <div class="footer">
             <hr noshade>
             <p id="flabel">Служба поддержки</p> 
             <a href="https://vk.com/gridness" target="_blank"><img src="https://raw.githubusercontent.com/Fanotik/chidori-rep/main/vk%20logo.png" alt=""> Gridness</a>
+            <!-- <br>
+            <a href="https://vk.com/fanotik" target="_blank"><img src="https://raw.githubusercontent.com/Fanotik/chidori-rep/main/vk%20logo.png" alt=""> nIBOP</a> -->
             <p id="copyright">© Lotus Games 2022
                 Это ПО распростаняется
                 по лицензии GNU CPL 3.0

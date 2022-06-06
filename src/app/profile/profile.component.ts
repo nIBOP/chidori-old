@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
-export class ProfileComponent implements OnInit {
+export class ProfileComponent {
 
-  constructor() { }
+  constructor(
+    private auth: AuthService
+  ) {}
 
-  ngOnInit(): void {
+  getEmail(){
+    return this.auth.getProfile()
   }
+  
 
 }

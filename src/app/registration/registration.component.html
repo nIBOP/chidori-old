@@ -1,6 +1,7 @@
- <div  class="container">
+<div  class="container">
     <form class="reg" [formGroup]="form" (ngSubmit)="submit()">
-        <h1> С возвращением!</h1>
+        <h1> Вступайте в клуб!</h1>
+        <p><em>Заполните поля ниже</em> </p>
         <div class="formcontrol">
             <label for="Email">Email</label>
             <br>
@@ -27,7 +28,6 @@
             </div>
         </div>
         <br>
-        <button type="submit" [disabled]="form.invalid"> Войти </button>
+        <button type="submit" [disabled]="form.invalid"> Регистрация </button>
     </form>
-    <a routerLink="/registration"> Вы еще не зарегистрированы? <br><em>нажмите сюда</em></a>
  </div>

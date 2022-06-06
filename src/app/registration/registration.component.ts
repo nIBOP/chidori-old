@@ -5,11 +5,11 @@ import { User } from '../interfaces';
 import { AuthService } from '../services/auth.service';
 
 @Component({
-  selector: 'app-auth',
-  templateUrl: './auth.component.html',
-  styleUrls: ['./auth.component.scss']
+  selector: 'app-registration',
+  templateUrl: './registration.component.html',
+  styleUrls: ['./registration.component.scss']
 })
-export class AuthComponent implements OnInit {
+export class RegistrationComponent implements OnInit {
 
   constructor(
     private auth: AuthService,
@@ -26,7 +26,7 @@ export class AuthComponent implements OnInit {
       [Validators.required, Validators.minLength(8)]),
     })
   }
-  
+
   submit() {
     if (this.form.invalid){
       return
@@ -35,13 +35,13 @@ export class AuthComponent implements OnInit {
     const user: User = {
       email: this.form.value.email,
       password: this.form.value.password,
-      // returnSecureToken: false
     }
 4
-    this.auth.login(user).subscribe(()=>{
+    this.auth.signup(user).subscribe(()=>{
       this.form.reset()
-      this.router.navigate(['/'])
+      this.router.navigate(['/authentification'])
     })
 
   }
+
 }

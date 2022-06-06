@@ -3,3 +3,29 @@ h1 {
     text-align: center;
     font-size: 400%;
 }
+h2 {
+    color: aliceblue;
+}
+.container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    a {
+        margin: 5%;
+        &:link{
+            text-decoration:none;
+            color: aliceblue;
+        }
+        &:visited{
+            text-decoration: none;
+            color: aliceblue;
+        }
+        &:active{
+            text-decoration: none;
+            color: aliceblue;
+        }
+        &:hover{
+            text-decoration: underline;
+            color: rebeccapurple;
+        }
+    }
+}

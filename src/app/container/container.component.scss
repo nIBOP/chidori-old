@@ -4,6 +4,17 @@
     width: 100%;
     height: 90%;
 }
+
+.container {
+    background: #181818;
+    border-radius: 2rem;
+    width: 98%;
+    height: 98%;
+    margin: 0;
+    margin-left: 1%;
+    margin-top: 1%;
+}
+
 .lftnav {
     background: #282828;
     width: 100%;
@@ -23,9 +34,38 @@
             color: aliceblue;
         }
         &:hover{
-            text-decoration: underline;
+            // text-decoration: underline;
             color: rebeccapurple;
         }
+    }
+}
+
+.profile {
+    text-align: center;
+    color: aliceblue;
+    img {
+        width: 60%;
+        margin: 6% 0%;
+    }
+    button {
+        // width: 10%;
+        margin: 0 12%;
+        padding: 2% 2%;
+        color: aliceblue;
+        font-family: 'Montserrat',sans-serif;
+        border-radius: 8px;
+        border: none;
+        background-color: #ED46DC;
+        &:hover {
+            background-color:cadetblue;
+        }
+        &:active {
+            background-color: darkgray;
+            color: black;
+        }
+    }
+    .active-link {
+        display: none;
     }
 }
 
@@ -72,12 +112,3 @@
     }
 }
 
-.container {
-    background: #181818;
-    border-radius: 2rem;
-    width: 98%;
-    height: 98%;
-    margin: 0;
-    margin-left: 1%;
-    margin-top: 1%;
-}

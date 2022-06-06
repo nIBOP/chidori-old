@@ -1,7 +1,26 @@
 h2 {
     color: aliceblue;
     font-family: 'Montserrat',sans-serif;
-    text-align: center;
     font-size: 250%;
     margin-top: 20%;
+}
+.main {
+    text-align: center;
+}
+
+button {
+    // width: 10%;
+    padding: 1%;
+    color: aliceblue;
+    font-family: 'Montserrat',sans-serif;
+    border-radius: 8px;
+    border: none;
+    background-color: #ED46DC;
+    &:hover {
+        background-color:cadetblue;
+    }
+    &:active {
+        background-color: darkgray;
+        color: black;
+    }
 }
