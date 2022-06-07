@@ -1,8 +1,10 @@
 <h1>Популярно сейчас</h1>
 <div class="container">
-    <a class="title" href="{{getHref()}}" *ngFor="let title of titles">
-        <h2>{{title}}</h2> <br> 
-        <img src="{{getImage()}}" alt=""> 
-    
-    </a>
+    <div class="card">
+        <a target="_blank" class="title" href="{{getHref()}}" *ngFor="let title of titles">
+            <p>{{title}}</p> <br> 
+            <img src="{{getImage()}}" alt=""> 
+        </a>
+    </div>
 </div>
+
